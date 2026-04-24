@@ -16,8 +16,6 @@ const navLinks = [
   { to: '/', label: '首页' },
   { to: '/services', label: '服务项目' },
   { to: '/about', label: '关于我们' },
-  { to: '/login', label: '登录' },
-  { to: '/register', label: '注册' },
 ]
 
 export default function Navbar() {

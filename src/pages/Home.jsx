@@ -24,7 +24,7 @@ export default function Home() {
             <Link to="/services" className="px-6 py-2.5 bg-brand-500 text-white text-sm font-medium rounded-lg hover:bg-brand-600 transition-colors">
               浏览服务 →
             </Link>
-            <Link to="/login" className="px-6 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/20">
+            <Link to="/register" className="px-6 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/20">
               登录 / 注册
             </Link>
           </div>
