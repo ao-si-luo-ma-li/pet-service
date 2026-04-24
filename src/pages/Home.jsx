@@ -1,162 +1,132 @@
 import { Link } from 'react-router-dom'
 import { services } from '../data/services'
-import ServiceIcon from '../components/ServiceIcon'
-
-const stats = [
-  { value: '500+', label: '服务案例' },
-  { value: '98%', label: '客户满意度' },
-  { value: '50+', label: '专业团队成员' },
-  { value: '7×24', label: '全天候服务' },
-]
-
-const whyUs = [
-  {
-    title: '专业团队',
-    desc: '所有服务人员均经过严格培训，持证上岗，用专业守护每一只宠物。',
-    emoji: '🎓',
-  },
-  {
-    title: '安全至上',
-    desc: '采用宠物友好型产品，全程视频记录，让主人安心托付。',
-    emoji: '🛡️',
-  },
-  {
-    title: '个性化服务',
-    desc: '尊重每只宠物的独特性格，量身定制专属服务方案。',
-    emoji: '💛',
-  },
-  {
-    title: '透明定价',
-    desc: '价格公开透明，无隐形消费，让每一分钱都花得明明白白。',
-    emoji: '💰',
-  },
-]
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
+      <section className="relative bg-earth-900 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&q=80"
-            alt="可爱宠物"
-            className="w-full h-full object-cover"
+            alt="宠物"
+            className="w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-earth-900/80 via-earth-900/50 to-transparent" />
         </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="max-w-2xl">
-            <div className="tag-pill mb-6 !bg-brand-500/20 !text-brand-200 border border-brand-400/30">
-              🐾 上海专业宠物服务机构
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              让每一份爱
-              <br />
-              <span className="text-brand-300">都有专业守护</span>
-            </h1>
-            <p className="text-earth-100 text-lg sm:text-xl leading-relaxed mb-10">
-              上海绰为腾宠物服务有限公司，专注提供宠物场所设计、上门服务、个性化寄养、AI赋能美容等全方位解决方案，用心服务每一个养宠家庭。
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/services" className="btn-primary !bg-brand-500 hover:!bg-brand-600 !text-white !py-4 !px-8 text-base">
-                浏览服务项目 →
-              </Link>
-              <Link to="/contact" className="btn-secondary !bg-white/10 !text-white !border-white/30 hover:!bg-white/20 !py-4 !px-8 text-base">
-                立即预约
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-          </svg>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="bg-white border-b border-earth-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map(stat => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-brand-500 mb-1">{stat.value}</div>
-                <div className="text-earth-500 text-sm">{stat.label}</div>
-              </div>
-            ))}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight max-w-2xl">
+            让每一只宠物<br className="hidden md:block" />都被专业守护
+          </h1>
+          <p className="text-earth-200 text-base md:text-lg mb-8 max-w-xl">
+            上海绰为腾宠物服务有限公司，为养宠家庭提供全方位宠物服务解决方案。
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/services" className="px-6 py-2.5 bg-brand-500 text-white text-sm font-medium rounded-lg hover:bg-brand-600 transition-colors">
+              浏览服务 →
+            </Link>
+            <Link to="/login" className="px-6 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/20">
+              登录 / 注册
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 md:py-28 bg-brand-50">
+      {/* Services - Clean Grid */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="tag-pill mb-4">我们的服务</div>
-            <h2 className="section-title">四大核心服务，为爱宠护航</h2>
-            <p className="section-subtitle">
-              从空间设计到日常照护，从个性化寄养到智能美容，我们用专业与爱心陪伴每一只宠物。
-            </p>
-          </div>
+          <h2 className="text-2xl font-bold text-earth-900 mb-2">我们的服务</h2>
+          <p className="text-earth-500 text-sm mb-10">Our Services</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-earth-200 border border-earth-200">
             {services.map(service => (
               <Link
                 key={service.id}
                 to={`/service/${service.id}`}
-                className="card p-6 group hover:-translate-y-1"
+                className="bg-white p-8 hover:bg-brand-50 transition-colors group"
               >
-                <div className={`w-14 h-14 rounded-xl bg-${service.color}-100 text-${service.color}-500 mb-5 p-3 group-hover:scale-110 transition-transform duration-300`}
-                  style={{ backgroundColor: '#FFF3E6', color: '#E67E22' }}>
-                  <ServiceIcon type={service.icon} />
-                </div>
-                <h3 className="font-bold text-earth-900 mb-2 text-base leading-snug">
+                <div className="text-3xl mb-4">{
+                  service.id === 'habitat' ? '🏠' :
+                  service.id === 'doorstep' ? '🚪' :
+                  service.id === 'boarding' ? '💛' :
+                  '✨'
+                }</div>
+                <h3 className="font-bold text-earth-900 mb-1 text-sm group-hover:text-brand-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-earth-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                <p className="text-earth-400 text-xs leading-relaxed line-clamp-3">
                   {service.description}
                 </p>
-                <div className="flex items-center text-brand-500 text-sm font-medium group-hover:gap-2 transition-all">
-                  了解更多
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                  </svg>
-                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Us */}
-      <section className="py-20 md:py-28 bg-white">
+      {/* Why Us - Clean Comparison */}
+      <section className="py-16 bg-brand-50 border-y border-earth-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="bg-white p-10 md:border-r border-earth-100">
+              <h3 className="font-bold text-earth-900 mb-1">我们的服务优势</h3>
+              <p className="text-xs text-earth-400 mb-6">Our Advantages</p>
+              <ul className="space-y-3">
+                {[
+                  '一站式宠物服务解决方案',
+                  '专业团队持证上岗',
+                  '服务全程视频记录可追溯',
+                  '透明定价无隐形消费',
+                ].map(item => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="text-leaf-500 mt-0.5">✓</span>
+                    <span className="text-earth-600 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white p-10">
+              <h3 className="font-bold text-earth-900 mb-1">为什么选择我们</h3>
+              <p className="text-xs text-earth-400 mb-6">Why Choose Us</p>
+              <ul className="space-y-3">
+                {[
+                  '非笼养、非家庭式寄养模式',
+                  '零交叉感染风险保障',
+                  '环境熟悉宠物更放松',
+                  '按需收费灵活选择',
+                ].map(item => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="text-brand-500 mt-0.5">✓</span>
+                    <span className="text-earth-600 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Brief */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="tag-pill mb-4">为什么选择我们</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-earth-900 mb-6 leading-tight">
-                因为爱，所以
-                <br />更专业
-              </h2>
-              <p className="text-earth-500 text-lg leading-relaxed mb-10">
-                我们不仅是一家宠物服务公司，更是一群热爱动物的人。我们相信，每一只宠物都是家庭成员，值得被最好的方式对待。
+              <h2 className="text-2xl font-bold text-earth-900 mb-3">上海绰为腾宠物服务有限公司</h2>
+              <p className="text-earth-500 text-sm leading-relaxed mb-6">
+                我们深知宠物是家庭的一员，更是情感的寄托。因此，我们始终坚持"专业、爱心、责任"的服务理念，致力于为每一只宠物提供贴心、安全、高品质的服务体验。
               </p>
-              <Link to="/about" className="btn-secondary">
-                了解更多 →
+              <Link to="/about" className="text-brand-500 hover:text-brand-600 text-sm font-medium transition-colors">
+                了解更多关于我们 →
               </Link>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {whyUs.map(item => (
-                <div key={item.title} className="card p-6">
-                  <div className="text-3xl mb-3">{item.emoji}</div>
-                  <h4 className="font-bold text-earth-900 mb-2">{item.title}</h4>
-                  <p className="text-earth-500 text-sm leading-relaxed">{item.desc}</p>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { num: '500+', label: '服务案例' },
+                { num: '98%', label: '客户满意度' },
+                { num: '50+', label: '专业团队成员' },
+                { num: '7×24', label: '全天候服务' },
+              ].map(stat => (
+                <div key={stat.label} className="text-center p-6 bg-brand-50 rounded-lg">
+                  <div className="text-2xl font-bold text-brand-500 mb-1">{stat.num}</div>
+                  <div className="text-earth-500 text-xs">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -165,23 +135,15 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-brand-500 to-brand-700 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
-        </div>
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            准备好为您的宠物选择最好的了吗？
-          </h2>
-          <p className="text-brand-100 text-lg mb-10">
-            立即联系我们，获取专属服务方案。让您的爱宠享受专业、温暖、贴心的照护服务。
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-600 font-bold rounded-lg hover:bg-brand-50 transition-all duration-200 shadow-lg hover:shadow-xl">
-              立即预约服务
+      <section className="py-16 bg-earth-900">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">准备好体验我们的服务？</h2>
+          <p className="text-earth-400 text-sm mb-8">注册账号，享受专属宠物服务</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to="/register" className="px-6 py-2.5 bg-brand-500 text-white text-sm font-medium rounded-lg hover:bg-brand-600 transition-colors">
+              立即注册 →
             </Link>
-            <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-medium rounded-lg border-2 border-white/50 hover:border-white hover:bg-white/10 transition-all duration-200">
+            <Link to="/services" className="px-6 py-2.5 bg-transparent text-white text-sm font-medium rounded-lg border border-earth-600 hover:bg-white/10 transition-colors">
               查看全部服务
             </Link>
           </div>
