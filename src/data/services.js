@@ -1,0 +1,158 @@
+export const services = [
+  {
+    id: 'habitat',
+    title: '宠物饲养场所搭建设计方案',
+    shortTitle: '场所搭建',
+    icon: 'habitat',
+    heroImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80',
+    color: 'brand',
+    highlights: [
+      '专业空间规划与动线设计',
+      '安全环保建材选型',
+      '智能化环境监控系统',
+      '符合国家宠物饲养标准',
+    ],
+    description: '为您的宠物打造舒适、安全、科学的居住环境。从空间布局到材质选择，我们提供一站式设计方案，让每一只宠物都能拥有专属的快乐天地。',
+    features: [
+      {
+        title: '空间规划',
+        desc: '根据宠物种类与数量，科学规划活动区、休息区、进食区等功能分区，最大化利用空间的同时确保宠物生活舒适。',
+        image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80',
+      },
+      {
+        title: '安全保障',
+        desc: '所有材料均采用无毒环保材质，边角防撞设计，地面防滑处理，并配备智能监控与报警系统，全天候守护宠物安全。',
+        image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80',
+      },
+      {
+        title: '环境控制',
+        desc: '集成温湿度调控、空气质量监测、自动通风等系统，一年四季为宠物提供恒温恒氧的宜居环境。',
+        image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80',
+      },
+    ],
+    process: [
+      { step: '01', title: '需求沟通', desc: '深入了解您的需求与预算' },
+      { step: '02', title: '现场勘测', desc: '实地测量并评估空间条件' },
+      { step: '03', title: '方案设计', desc: '出具3D效果图与施工图' },
+      { step: '04', title: '施工落地', desc: '专业团队全程施工监理' },
+      { step: '05', title: '验收交付', desc: '严格质检后交付使用' },
+    ],
+  },
+  {
+    id: 'doorstep',
+    title: '宠物上门服务定制方案',
+    shortTitle: '上门服务',
+    icon: 'doorstep',
+    heroImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80',
+    color: 'leaf',
+    highlights: [
+      '持证专业宠物护理师上门',
+      '服务全程视频记录可追溯',
+      '个性化定制服务内容',
+      '24小时应急响应机制',
+    ],
+    description: '让宠物在自己熟悉的环境中享受专业照护。上门喂食、遛弯、陪伴、简单护理，无需外出奔波，宠物更安心，主人更省心。',
+    features: [
+      {
+        title: '喂食照料',
+        desc: '按照您指定的食谱与用量准时喂食，清洗食盆水碗，并记录每次进食情况，确保宠物饮食规律健康。',
+        image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?w=600&q=80',
+      },
+      {
+        title: '遛弯陪伴',
+        desc: '专业陪玩互动，让宠物得到充足运动与情感陪伴。遛弯路线可根据您的要求灵活安排，每次服务均有详细记录。',
+        image: 'https://images.unsplash.com/photo-1558929996-da64ba858215?w=600&q=80',
+      },
+      {
+        title: '健康监测',
+        desc: '每次上门观察宠物精神状态、排泄情况，发现异常及时反馈。必要时协助预约宠物医院，全程守护宠物健康。',
+        image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=600&q=80',
+      },
+    ],
+    process: [
+      { step: '01', title: '预约下单', desc: '线上预约服务时间与内容' },
+      { step: '02', title: '需求匹配', desc: '智能匹配合适的护理师' },
+      { step: '03', title: '服务执行', desc: '护理师按标准流程上门服务' },
+      { step: '04', title: '服务报告', desc: '微信推送本次服务详情' },
+      { step: '05', title: '满意度评价', desc: '您对本次服务进行评价' },
+    ],
+  },
+  {
+    id: 'boarding',
+    title: '宠物个性化寄养方案',
+    shortTitle: '个性寄养',
+    icon: 'boarding',
+    heroImage: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80',
+    color: 'earth',
+    highlights: [
+      '单宠单间私密空间',
+      '专属饲养员一对一照护',
+      '每日健康记录与汇报',
+      '营养定制餐食方案',
+    ],
+    description: '告别传统笼养，我们为每只宠物提供独立舒适的寄养空间，配套专属照护服务，让宠物在主人外出期间依然享受家的温暖。',
+    features: [
+      {
+        title: '单宠单间',
+        desc: '每个房间仅入住一只宠物，避免交叉感染风险。房间配备舒适的床铺、玩具和专属摄像头，主人可随时查看爱宠状态。',
+        image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80',
+      },
+      {
+        title: '专属照护',
+        desc: '每只宠物配备专属饲养员，提供每日梳理、互动玩耍、情绪安抚等服务。了解每只宠物的习惯与偏好，让它感受到个性化关爱。',
+        image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80',
+      },
+      {
+        title: '营养餐食',
+        desc: '根据宠物年龄、体重、健康状况定制每日餐食。新鲜食材、当日制作，拒绝劣质宠粮，让宠物吃得好、身体棒。',
+        image: 'https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=600&q=80',
+      },
+    ],
+    process: [
+      { step: '01', title: '预约登记', desc: '了解宠物习性与健康状况' },
+      { step: '02', title: '入住体检', desc: '专业兽医进行全面检查' },
+      { step: '03', title: '适应期', desc: '专属饲养员引导适应环境' },
+      { step: '04', title: '日常照护', desc: '每日喂养、遛弯、清洁、互动' },
+      { step: '05', title: '健康出院', desc: '再次体检后安全交接' },
+    ],
+  },
+  {
+    id: 'grooming',
+    title: 'AI赋能宠物美容方案',
+    shortTitle: 'AI美容',
+    icon: 'grooming',
+    heroImage: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=1200&q=80',
+    color: 'brand',
+    highlights: [
+      'AI皮肤检测精准分析',
+      '个性化美容方案生成',
+      '全程可视化服务流程',
+      '宠物情绪实时监测',
+    ],
+    description: '融合人工智能与传统美容技艺，为宠物提供科学、精准、个性化的美容服务。通过AI技术深度分析宠物皮肤与毛发状态，量身定制最合适的护理方案。',
+    features: [
+      {
+        title: 'AI皮肤检测',
+        desc: '采用先进图像识别技术，深度分析宠物皮肤水分、油脂、毛发密度等多项指标，精准识别潜在皮肤问题，提前预防。',
+        image: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&q=80',
+      },
+      {
+        title: '个性化方案',
+        desc: '基于AI检测结果，结合宠物品种、年龄、季节等因素，自动生成最适合的美容护理方案。每只宠物独享专属服务流程。',
+        image: 'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&q=80',
+      },
+      {
+        title: '智能设备辅助',
+        desc: '配备智能美容工具，精准控制修剪长度与力度，减少宠物不适感。全程记录护理数据，为下次服务提供参考依据。',
+        image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80',
+      },
+    ],
+    process: [
+      { step: '01', title: 'AI扫描', desc: '设备采集宠物皮肤毛发数据' },
+      { step: '02', title: '智能分析', desc: 'AI生成个性化检测报告' },
+      { step: '03', title: '方案确认', desc: '美容师审核并与主人确认' },
+      { step: '04', title: '护理执行', desc: '按方案进行洗护美容服务' },
+      { step: '05', title: '效果评估', desc: 'AI复检并出具护理建议' },
+    ],
+  },
+]
